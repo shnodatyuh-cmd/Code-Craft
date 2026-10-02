@@ -1,0 +1,235 @@
+:root{
+    --bg: #0b0f1a;
+    --surface: #131a2b;
+    --border: rgba(255,255,255,0.08);
+    --text-main: #e5e7eb;
+    --text-muted: #9ca3af;
+    --accent: #2be2d4;
+
+    --c-html: #e34f26;
+    --c-css: #2965f1;
+    --c-js: #f7df1e;
+    --c-react: #61dafb;
+    --c-node: #4fc463;
+    --c-python: #3776AB;
+    --c-php: #8892bf;
+    --c-java: #f89820;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins','Segoe UI',Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: var(--bg);
+    color: var(--text-main);
+}
+
+/* ===== Section header (Front-End / Back-End) ===== */
+.pmpm{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 25px 60px;
+  border-bottom: 1px solid var(--border);
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(8px);
+}
+.pmpm h1{
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--accent);
+  padding: 10px;
+  transition: 0.3s ease all;
+  display: inline-block;
+}
+.pmpm h1:hover{
+  transform: translateY(-4px);
+  color: #FDBA74;
+}
+.mhmh ul{
+   display: flex;
+   list-style-type: none;
+   gap: 10px;
+   flex-wrap: wrap;
+}
+.mhmh li{
+  display: inline-block;
+}
+.mhmh a{
+  text-decoration: none;
+  color: var(--text-main);
+  padding: 10px 18px;
+  border-radius: 8px;
+  display: inline-block;
+  transition: 0.3s ease all;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid var(--border);
+}
+.mhmh a:hover{
+  background-color: var(--accent);
+  color: #04211f;
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+/* ===== Shared topic section layout ===== */
+.yyy, .css, .excel, .trtr, .kkk, .ggg, .bmw, .sse{
+    width: 85%;
+    max-width: 1100px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    background: var(--surface);
+    padding: 45px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    transition: all 0.3s ease;
+}
+.yyy:hover, .css:hover, .excel:hover, .trtr:hover,
+.kkk:hover, .ggg:hover, .bmw:hover, .sse:hover{
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 16px 32px rgba(43,226,212,0.12);
+}
+
+/* left border accent stripe per topic */
+.yyy{ border-left: 4px solid var(--c-html); }
+.css{ border-left: 4px solid var(--c-css); }
+.excel{ border-left: 4px solid var(--c-js); }
+.trtr{ border-left: 4px solid var(--c-react); }
+.kkk{ border-left: 4px solid var(--c-node); }
+.ggg{ border-left: 4px solid var(--c-python); }
+.bmw{ border-left: 4px solid var(--c-php); }
+.sse{ border-left: 4px solid var(--c-java); }
+
+/* text column shared */
+.text, .word, .mrinda, .rere, .ll, .gfgf, .qqq, .cvc{
+    flex: 1;
+    min-width: 260px;
+}
+.text h1, .word h1, .mrinda h1, .rere h1, .ll h1, .gfgf h1, .qqq h1, .cvc h1{
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.text h2, .word h2, .mrinda h2, .rere h2, .ll h2, .gfgf h2, .qqq h2, .cvc h2{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0 12px;
+    color: var(--text-main);
+}
+.text p, .word p, .mrinda p, .rere p, .ll p, .gfgf p, .qqq p, .cvc p{
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+.text ul, .word ul, .mrinda ul, .rere ul, .ll ul, .gfgf ul, .qqq ul, .cvc ul{
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+.text li, .word li, .mrinda li, .rere li, .ll li, .gfgf li, .qqq li, .cvc li{
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-main);
+    line-height: 2;
+    padding-left: 18px;
+    position: relative;
+}
+.text li::before, .word li::before, .mrinda li::before, .rere li::before,
+.ll li::before, .gfgf li::before, .qqq li::before, .cvc li::before{
+    content: "▹";
+    position: absolute;
+    left: 0;
+}
+
+/* per-topic heading/icon accent color */
+.text h1, .text h2, .text li::before{ color: var(--c-html); }
+.word h1, .word h2, .word li::before{ color: var(--c-css); }
+.mrinda h1, .mrinda h2, .mrinda li::before{ color: var(--c-js); }
+.rere h1, .rere h2, .rere li::before{ color: var(--c-react); }
+.ll h1, .ll h2, .ll li::before{ color: var(--c-node); }
+.gfgf h1, .gfgf h2, .gfgf li::before{ color: var(--c-python); }
+.qqq h1, .qqq h2, .qqq li::before{ color: var(--c-php); }
+.cvc h1, .cvc h2, .cvc li::before{ color: var(--c-java); }
+
+/* ===== Course button ===== */
+.btn{
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--accent);
+    color: #04211f;
+    padding: 12px 26px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 14px;
+}
+.btn:hover{
+    background-color: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    transform: translateY(-4px);
+}
+
+/* ===== Footer ===== */
+footer{
+    background: #0d1420;
+    border-top: 1px solid var(--border);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 40px;
+}
+.social-icons{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 20px 0;
+}
+.social-icons a{
+    color: white;
+    font-size: 30px;
+    transition: 0.3s;
+}
+.social-icons a:hover{
+    color: var(--accent);
+    transform: scale(1.2);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px){
+    .yyy, .css, .excel, .trtr, .kkk, .ggg, .bmw, .sse{
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+    .pmpm{
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .text li::before, .word li::before, .mrinda li::before, .rere li::before,
+    .ll li::before, .gfgf li::before, .qqq li::before, .cvc li::before{
+        display: none;
+    }
+    .text li, .word li, .mrinda li, .rere li, .ll li, .gfgf li, .qqq li, .cvc li{
+        padding-left: 0;
+    }
+}
