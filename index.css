@@ -18,7 +18,7 @@
     margin-bottom: 20px;
 }
 .hero-text p{
-    color:var(--accent)  ;
+    color: var(--text-muted);
     line-height: 1.8;
     margin-bottom: 28px;
     max-width: 52ch;
@@ -80,9 +80,6 @@
     outline: 3px solid var(--accent);
     outline-offset: 3px;
 }
- 
-
- 
 
 /* ===== Responsive ===== */
 @media (max-width: 900px){
@@ -90,4 +87,9 @@
     .hero-text h2{ font-size: 32px; }
     .hero-text p{ margin-left: auto; margin-right: auto; }
     .tracks-grid{ grid-template-columns: 1fr; }
+}
+
+/* keep section titles visible below the sticky navbar when using # links */
+#home, #tracks, #contact{
+    scroll-margin-top: 110px;
 }
