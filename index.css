@@ -18,7 +18,7 @@
     margin-bottom: 20px;
 }
 .hero-text p{
-    color:  red;
+    color:var(--accent)  ;
     line-height: 1.8;
     margin-bottom: 28px;
     max-width: 52ch;
