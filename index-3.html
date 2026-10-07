@@ -7,12 +7,7 @@
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <script>
-  document.documentElement.setAttribute(
-    "data-theme",
-    localStorage.getItem("theme") || "light"
-  );
-</script>
+ 
 </head>
 <body>
 
@@ -41,7 +36,7 @@
             </p>
             <a class="btn" href="#tracks">Choose your path</a>
         </div>
-        <button id="theme-toggle" aria-label="">🌙</button>
+ 
         <div class="hero-code">
 <pre>&lt;h1&gt;Hello, world!&lt;/h1&gt;
 &lt;p&gt;My first page.&lt;/p&gt;
@@ -88,23 +83,6 @@ h1 {
         </div>
         <p>© 2026 CODECRAFT. All Rights Reserved.</p>
     </footer>
-<script>
-    const toggle = document.getElementById("theme-toggle");
-const root = document.documentElement;
-
-function setTheme(theme) {
-  root.setAttribute("data-theme", theme);
-  localStorage.setItem("theme", theme);
-  toggle.textContent = theme === "dark" ? "☀️" : "🌙";
-}
-
-const saved = localStorage.getItem("theme");
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-setTheme(saved || (prefersDark ? "dark" : "light"));
-
-toggle.addEventListener("click", () => {
-  setTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark");
-});
-</script>
+ 
 </body>
 </html>
